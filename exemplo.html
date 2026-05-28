@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac Shoes com Bootstrap 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body class="bg-light">
+
+    <header class="header-custom">
+        <div class="container d-flex justify-content-between align-items-center px-4">
+            <!-- Logo -->
+            <div class="logo-section">
+               <img src="img\logo.png" alt="Senac Shoes" class="logo-img">
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-section">
+                <div class="input-group">
+                    <input type="text" class="form-control search-input" placeholder="Qual o modelo que você procura?">
+                    <button class="btn btn-search" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Icons Section -->
+            <div class="icons-section d-flex gap-3">
+                <button class="icon-btn" title="Minha Conta"><img class="far fa-user" src="img\account_circle_27dp_F1F1F1_FILL0_wght400_GRAD0_opsz24.svg"></button>
+                <button class="icon-btn" title="Favoritos"><img class="far fa-heart" src="img\favorite_27dp_F1F1F1_FILL0_wght400_GRAD0_opsz24.svg"></button>
+                <button class="icon-btn" title="Carrinho"><img class="far fa-shopping-cart" src="img\shopping_bag_27dp_F1F1F1_FILL0_wght400_GRAD0_opsz24.svg"></button>
+            </div>
+        </div>
+    </header>
+    <h1 id="exempro">PIROCADA</h1>
+    <main class="container">
+        <div class="row">
+            
+            <aside class="col-md-3 mb-4">
+                <div class="accordion shadow-sm border-0" id="accordionFiltros">
+                    <!-- Categorias -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCategoria" aria-expanded="true" aria-controls="collapseCategoria">
+                                Categorias
+                            </button>
+                        </h2>
+                        <div id="collapseCategoria" class="accordion-collapse collapse show" data-bs-parent="#accordionFiltros">
+                            <div class="accordion-body p-3">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="check-masculino">
+                                    <label class="form-check-label d-flex justify-content-between flex-grow-1" for="check-masculino">
+                                        Masculino <span class="text-muted small ms-auto">12</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="check-feminino">
+                                    <label class="form-check-label d-flex justify-content-between flex-grow-1" for="check-feminino">
+                                        Feminino <span class="text-muted small ms-auto">24</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="check-esportivo">
+                                    <label class="form-check-label d-flex justify-content-between flex-grow-1" for="check-esportivo">
+                                        Esportivo <span class="text-muted small ms-auto">20</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check-treino">
+                                    <label class="form-check-label d-flex justify-content-between flex-grow-1" for="check-treino">
+                                        Treino <span class="text-muted small ms-auto">15</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cores -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCor" aria-expanded="false" aria-controls="collapseCor">
+                                Cor
+                            </button>
+                        </h2>
+                        <div id="collapseCor" class="accordion-collapse collapse" data-bs-parent="#accordionFiltros">
+                            <div class="accordion-body p-3">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="check-azul">
+                                    <label class="form-check-label d-flex justify-content-between flex-grow-1" for="check-azul">
+                                        Azul <span class="text-muted small ms-auto">10</span>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="check-vermelho">
+                                    <label class="form-check-label d-flex justify-content-between flex-grow-1" for="check-vermelho">
+                                        Vermelho <span class="text-muted small ms-auto">12</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="check-preto">
+                                    <label class="form-check-label d-flex justify-content-between flex-grow-1" for="check-preto">
+                                        Preto <span class="text-muted small ms-auto">43</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botões de Ação -->
+                <div class="d-grid gap-2 d-md-flex mt-3">
+                    <button class="btn btn-primary btn-sm flex-grow-1">Filtrar</button>
+                    <button class="btn btn-light btn-sm flex-grow-1 border">Resetar</button>
+                </div>
+            </aside>
+
+            <section class="col-md-9">
+                <div class="mb-3 text-muted small">
+                    <span>↑ Ordenar por popularidade</span>
+                </div>
+
+                <div class="card shadow-sm border-0 mb-3 p-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-3 position-relative text-center">
+                            <span class="badge bg-danger position-absolute top-0 start-0">-30%</span>
+                            <img src="img\shoes1.jpg" class="img-fluid rounded" alt="Tênis Adidas Lite Racer" style="max-width: 150px; height: auto;">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body py-0">
+                                <div class="star-rating mb-1" data-rating="5">
+                                    <i class="far fa-star star" data-value="1"></i>
+                                    <i class="far fa-star star" data-value="2"></i>
+                                    <i class="far fa-star star" data-value="3"></i>
+                                    <i class="far fa-star star" data-value="4"></i>
+                                    <i class="far fa-star star" data-value="5"></i>
+                                    <span class="ms-2 rating-value">5</span>
+                                </div>
+                                <h2 class="card-title fs-6">Tênis Adidas Lite Racer</h2>
+                                <div class="mb-3">
+                                    <span class="fs-5 fw-bold text-primary">R$ 180,00</span>
+                                    <span class="text-decoration-line-through text-muted ms-2 small">R$ 260,00</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary btn-sm btn-carrinho">Colocar no Carrinho</button>
+                                    <button class="btn btn-light btn-sm border">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm border-0 mb-3 p-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-3 position-relative text-center">
+                            <img src="img\shoes2.jpg" class="img-fluid rounded" alt="Sapatênis Lona" style="max-width: 150px; height: auto;">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body py-0">
+                                <div class="star-rating mb-1" data-rating="5">
+                                    <i class="far fa-star star" data-value="1"></i>
+                                    <i class="far fa-star star" data-value="2"></i>
+                                    <i class="far fa-star star" data-value="3"></i>
+                                    <i class="far fa-star star" data-value="4"></i>
+                                    <i class="far fa-star star" data-value="5"></i>
+                                    <span class="ms-2 rating-value">5</span>
+                                </div>
+                                <h2 class="card-title fs-6">Sapatenis Lona SW Shoes Masculino Acompanha Chinelo Branco - Chumbo</h2>
+                                <div class="mb-3">
+                                    <span class="fs-5 fw-bold text-primary">R$ 90,00</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary btn-sm btn-carrinho">Colocar no Carrinho</button>
+                                    <button class="btn btn-light btn-sm border">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm border-0 mb-3 p-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-3 position-relative text-center">
+                            <img src="img\shoes3.jpg" class="img-fluid rounded" alt="Sapatênis Lona" style="max-width: 150px; height: auto;">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body py-0">
+                                <div class="star-rating mb-1" data-rating="5">
+                                    <i class="far fa-star star" data-value="1"></i>
+                                    <i class="far fa-star star" data-value="2"></i>
+                                    <i class="far fa-star star" data-value="3"></i>
+                                    <i class="far fa-star star" data-value="4"></i>
+                                    <i class="far fa-star star" data-value="5"></i>
+                                    <span class="ms-2 rating-value">5</span>
+                                </div>
+                                <h2 class="card-title fs-6">Tênis Casual Masculino SB Camila Nicacio em Lona com Solado Caixa Alta Lançamento - Chumbo</h2>
+                                <div class="mb-3">
+                                    <span class="fs-5 fw-bold text-primary">R$ 75,00</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary btn-sm btn-carrinho">Colocar no Carrinho</button>
+                                    <button class="btn btn-light btn-sm border">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm border-0 mb-3 p-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-3 position-relative text-center">
+                            <img src="img\shoes4.jpg" class="img-fluid rounded" alt="Sapatênis Lona" style="max-width: 150px; height: auto;">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body py-0">
+                                <div class="star-rating mb-1" data-rating="5">
+                                    <i class="far fa-star star" data-value="1"></i>
+                                    <i class="far fa-star star" data-value="2"></i>
+                                    <i class="far fa-star star" data-value="3"></i>
+                                    <i class="far fa-star star" data-value="4"></i>
+                                    <i class="far fa-star star" data-value="5"></i>
+                                    <span class="ms-2 rating-value">5</span>
+                                </div>
+                                <h2 class="card-title fs-6">Tênis Slip On Infantil Polo Plus</h2>
+                                <div class="mb-3">
+                                    <span class="fs-5 fw-bold text-primary">R$ 100,00</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary btn-sm btn-carrinho">Colocar no Carrinho</button>
+                                    <button class="btn btn-light btn-sm border">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                <div class="card shadow-sm border-0 mb-3 p-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-3 position-relative text-center">
+                            <img src="img\shoes5.jpg" class="img-fluid rounded" alt="Sapatênis Lona" style="max-width: 150px; height: auto;">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body py-0">
+                                <div class="star-rating mb-1" data-rating="5">
+                                    <i class="far fa-star star" data-value="1"></i>
+                                    <i class="far fa-star star" data-value="2"></i>
+                                    <i class="far fa-star star" data-value="3"></i>
+                                    <i class="far fa-star star" data-value="4"></i>
+                                    <i class="far fa-star star" data-value="5"></i>
+                                    <span class="ms-2 rating-value">5</span>
+                                </div>
+                                <h2 class="card-title fs-6">Tênis Olympikus Urano Unisex - Chumbo+Verde</h2>
+                                <div class="mb-3">
+                                    <span class="fs-5 fw-bold text-primary">R$ 140,00</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary btn-sm btn-carrinho">Colocar no Carrinho</button>
+                                    <button class="btn btn-light btn-sm border">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm border-0 mb-3 p-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-3 position-relative text-center">
+                            <img src="img\shoes6.jpg" class="img-fluid rounded" alt="Sapatênis Lona" style="max-width: 150px; height: auto;">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body py-0">
+                                <div class="star-rating mb-1" data-rating="5">
+                                    <i class="far fa-star star" data-value="1"></i>
+                                    <i class="far fa-star star" data-value="2"></i>
+                                    <i class="far fa-star star" data-value="3"></i>
+                                    <i class="far fa-star star" data-value="4"></i>
+                                    <i class="far fa-star star" data-value="5"></i>
+                                    <span class="ms-2 rating-value">5</span>
+                                </div>
+                                <h2 class="card-title fs-6">Tênis Olympikus Mega Masculino</h2>
+                                <div class="mb-3">
+                                    <span class="fs-5 fw-bold text-primary">R$ 200,00</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary btn-sm btn-carrinho">Colocar no Carrinho</button>
+                                    <button class="btn btn-light btn-sm border">♡</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        let texto1 = document.getElementById("exempro");
+        console.log(texto1);
+        
+    </script>
+</body>
+</html>
