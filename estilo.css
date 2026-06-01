@@ -1,11 +1,123 @@
-header{
-    flex: auto;
-    font-size: 20px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
-h1{
-    color: blue;
+:root{
+    --bg-principal: #ccc;
+    --bg-caixas: #ccc;
+    --cor-texto: #303030;
+    --cor-borda: #303030;
 }
+
+body.dark-mode{
+    --bg-principal: #303030;      
+    --bg-caixas: #303030;         
+    --cor-texto: #ccc;         
+    --cor-borda: #ccc;         
+}
+
 body{
-    background-color: grey;
-    color: white;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 20px;
+    background-color: var(--bg-principal);
+    color: var(--cor-texto);
+    transition: background-color 0.3s ease;
+}
+
+header, footer, section, article, aside, nav{
+    border: 2px solid var(--cor-borda);
+    border-radius: 6px;
+    background-color: var(--bg-caixas);
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.site-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 20px;
+}
+
+.content-area{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.site-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.site-article{
+    background-color: #fafafa;
+    margin-top: 5px;
+}
+
+.site-aside{
+    display: flex;
+    align-items: flex-start;
+}
+
+.site-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-navs{
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+#btn-tema{ 
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+  
+#btn-tema:hover {
+    transform: scale(1.5);
+}
+
+dt{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dd{
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.site-nav{
+    padding: 8px 20px;
+    border: 2px solid #0076ff;
+    color: #0076ff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.site-nav:hover{
+    background-color: #0076ff;
+    color: var(--bg-caixas);
 }
